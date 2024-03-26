@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/585257__lesaucisson__swoosh-1.mp3-536d0f51da4b331d89a59d22daadda93.mp3str"
+
+[deps]
+
+source_file="res://Sounds/585257__lesaucisson__swoosh-1.mp3"
+dest_files=[ "res://.import/585257__lesaucisson__swoosh-1.mp3-536d0f51da4b331d89a59d22daadda93.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

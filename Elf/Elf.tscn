@@ -1,0 +1,89 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Sprites/Elf.png" type="Texture" id=1]
+[ext_resource path="res://Elf/Elf.gd" type="Script" id=2]
+[ext_resource path="res://Sprites/Elf_fire1.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Elf_fire2.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Elf_fire3.png" type="Texture" id=5]
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="SpriteFrames" id=7]
+animations = [ {
+"frames": [ SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 8 ) ],
+"loop": false,
+"name": "Fire",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 6 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 5.0
+} ]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 33.0151
+
+[sub_resource type="Animation" id=2]
+resource_name = "Move"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4, 0.7, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.945489, 1 ), Vector2( 0.82549, 1 ), Vector2( 0.825, 1 ), Vector2( 1, 0.85 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4, 0.7, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, -5 ), Vector2( 0, 0 ), Vector2( 0, 3 ), Vector2( 0, 0 ) ]
+}
+
+[node name="Elf" type="KinematicBody2D"]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource( 2 )
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.945489, 1 )
+frames = SubResource( 7 )
+animation = "Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 6 )
+shape = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+playback_speed = 2.0
+anims/Move = SubResource( 2 )

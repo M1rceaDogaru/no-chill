@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/highoctane.mp3-fea837a543e7f91394b380e95a744ad3.mp3str"
+
+[deps]
+
+source_file="res://highoctane.mp3"
+dest_files=[ "res://.import/highoctane.mp3-fea837a543e7f91394b380e95a744ad3.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

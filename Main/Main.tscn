@@ -1,0 +1,221 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://RoomTemplate/RoomTemplate.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Sprites/Carrot.png" type="Texture" id=3]
+[ext_resource path="res://Main/Main.gd" type="Script" id=4]
+[ext_resource path="res://Main/Camera.gd" type="Script" id=5]
+[ext_resource path="res://secrcode.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://highoctane.mp3" type="AudioStream" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 50
+outline_size = 1
+use_filter = true
+extra_spacing_char = 5
+font_data = ExtResource( 6 )
+
+[node name="Main" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 535, 284 )
+
+[node name="RoomTemplate" parent="." instance=ExtResource( 2 )]
+
+[node name="SpawnPoints" type="Node2D" parent="."]
+
+[node name="SP1" type="Node2D" parent="SpawnPoints"]
+position = Vector2( -32, -54 )
+
+[node name="SP2" type="Node2D" parent="SpawnPoints"]
+position = Vector2( 66, -56 )
+
+[node name="SP3" type="Node2D" parent="SpawnPoints"]
+position = Vector2( 178, -56 )
+
+[node name="SP4" type="Node2D" parent="SpawnPoints"]
+position = Vector2( 284, -54 )
+
+[node name="SP5" type="Node2D" parent="SpawnPoints"]
+position = Vector2( 398, -56 )
+
+[node name="SP6" type="Node2D" parent="SpawnPoints"]
+position = Vector2( 516, -56 )
+
+[node name="SP7" type="Node2D" parent="SpawnPoints"]
+position = Vector2( 644, -58 )
+
+[node name="SP8" type="Node2D" parent="SpawnPoints"]
+position = Vector2( 782, -58 )
+
+[node name="SP9" type="Node2D" parent="SpawnPoints"]
+position = Vector2( 904, -62 )
+
+[node name="SP10" type="Node2D" parent="SpawnPoints"]
+position = Vector2( 1042, -74 )
+
+[node name="SP11" type="Node2D" parent="SpawnPoints"]
+position = Vector2( 1098, 22 )
+
+[node name="SP12" type="Node2D" parent="SpawnPoints"]
+position = Vector2( 1102, 136 )
+
+[node name="SP13" type="Node2D" parent="SpawnPoints"]
+position = Vector2( 1104, 254 )
+
+[node name="SP14" type="Node2D" parent="SpawnPoints"]
+position = Vector2( 1106, 386 )
+
+[node name="SP15" type="Node2D" parent="SpawnPoints"]
+position = Vector2( 1108, 494 )
+
+[node name="SP16" type="Node2D" parent="SpawnPoints"]
+position = Vector2( 1112, 594 )
+
+[node name="SP17" type="Node2D" parent="SpawnPoints"]
+position = Vector2( 1062, 652 )
+
+[node name="SP18" type="Node2D" parent="SpawnPoints"]
+position = Vector2( 934, 672 )
+
+[node name="SP19" type="Node2D" parent="SpawnPoints"]
+position = Vector2( 816, 678 )
+
+[node name="SP20" type="Node2D" parent="SpawnPoints"]
+position = Vector2( 686, 676 )
+
+[node name="SP21" type="Node2D" parent="SpawnPoints"]
+position = Vector2( 558, 678 )
+
+[node name="SP22" type="Node2D" parent="SpawnPoints"]
+position = Vector2( 412, 680 )
+
+[node name="SP23" type="Node2D" parent="SpawnPoints"]
+position = Vector2( 294, 676 )
+
+[node name="SP24" type="Node2D" parent="SpawnPoints"]
+position = Vector2( 158, 676 )
+
+[node name="SP25" type="Node2D" parent="SpawnPoints"]
+position = Vector2( 42, 676 )
+
+[node name="SP26" type="Node2D" parent="SpawnPoints"]
+position = Vector2( -44, 640 )
+
+[node name="SP27" type="Node2D" parent="SpawnPoints"]
+position = Vector2( -60, 540 )
+
+[node name="SP28" type="Node2D" parent="SpawnPoints"]
+position = Vector2( -62, 438 )
+
+[node name="SP29" type="Node2D" parent="SpawnPoints"]
+position = Vector2( -68, 324 )
+
+[node name="SP30" type="Node2D" parent="SpawnPoints"]
+position = Vector2( -66, 206 )
+
+[node name="SP31" type="Node2D" parent="SpawnPoints"]
+position = Vector2( -64, 88 )
+
+[node name="SP32" type="Node2D" parent="SpawnPoints"]
+position = Vector2( -66, 8 )
+
+[node name="Positions" type="Node2D" parent="."]
+
+[node name="P1" type="Node2D" parent="Positions"]
+position = Vector2( 129, 112 )
+
+[node name="P2" type="Node2D" parent="Positions"]
+position = Vector2( 191, 282 )
+
+[node name="P3" type="Node2D" parent="Positions"]
+position = Vector2( 142, 377 )
+
+[node name="P4" type="Node2D" parent="Positions"]
+position = Vector2( 100, 499 )
+
+[node name="P5" type="Node2D" parent="Positions"]
+position = Vector2( 263, 461 )
+
+[node name="P6" type="Node2D" parent="Positions"]
+position = Vector2( 416, 499 )
+
+[node name="P7" type="Node2D" parent="Positions"]
+position = Vector2( 591, 499 )
+
+[node name="P8" type="Node2D" parent="Positions"]
+position = Vector2( 752, 491 )
+
+[node name="P9" type="Node2D" parent="Positions"]
+position = Vector2( 933, 514 )
+
+[node name="P10" type="Node2D" parent="Positions"]
+position = Vector2( 876, 326 )
+
+[node name="P11" type="Node2D" parent="Positions"]
+position = Vector2( 917, 136 )
+
+[node name="P12" type="Node2D" parent="Positions"]
+position = Vector2( 742, 103 )
+
+[node name="P13" type="Node2D" parent="Positions"]
+position = Vector2( 536, 126 )
+
+[node name="P14" type="Node2D" parent="Positions"]
+position = Vector2( 395, 120 )
+
+[node name="P15" type="Node2D" parent="Positions"]
+position = Vector2( 242, 140 )
+
+[node name="P16" type="Node2D" parent="Positions"]
+position = Vector2( 352, 280 )
+
+[node name="P17" type="Node2D" parent="Positions"]
+position = Vector2( 479, 395 )
+
+[node name="P18" type="Node2D" parent="Positions"]
+position = Vector2( 741, 310 )
+
+[node name="P19" type="Node2D" parent="Positions"]
+position = Vector2( 631, 227 )
+
+[node name="Health" type="Node2D" parent="."]
+z_index = 20
+
+[node name="Health1" type="Sprite" parent="Health"]
+position = Vector2( 95.149, 507.822 )
+scale = Vector2( 0.580452, 0.559715 )
+texture = ExtResource( 3 )
+
+[node name="Health2" type="Sprite" parent="Health"]
+position = Vector2( 180.149, 506.822 )
+scale = Vector2( 0.580452, 0.559715 )
+texture = ExtResource( 3 )
+
+[node name="Health3" type="Sprite" parent="Health"]
+position = Vector2( 263.149, 505.822 )
+scale = Vector2( 0.580452, 0.559715 )
+texture = ExtResource( 3 )
+
+[node name="Camera" type="Camera2D" parent="."]
+anchor_mode = 0
+current = true
+script = ExtResource( 5 )
+
+[node name="UI" type="Node2D" parent="."]
+z_index = 30
+
+[node name="Score" type="Label" parent="UI"]
+margin_left = 338.0
+margin_top = 29.0
+margin_right = 685.0
+margin_bottom = 80.0
+custom_fonts/font = SubResource( 1 )
+text = "00000000000"
+align = 1
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+volume_db = -20.101
+autoplay = true
